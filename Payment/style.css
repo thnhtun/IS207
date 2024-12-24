@@ -9,28 +9,132 @@
     font-family: "Montserrat", sans-serif;
 }
 
+body {
+    color: #121212;
+    font-size: 1.12vw;
+    font-weight: 400;
+    line-height: 130%;
+}
+  
+h1 {
+    color: #121212;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 4.65vw;
+    font-weight: 600;
+    line-height: 140%;
+}
+  
+h2 {
+    color: #121212;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.8vw;
+    font-weight: 600;
+    line-height: 120%;
+}
+  
+h3 {
+    color: #121212;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.7vw;
+    font-weight: 500;
+    line-height: 120%;
+  }
+  
+h4 {
+    color: #121212;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2vw;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  
 h5 {
     color: #121212;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 1.45vw;
     font-weight: 500;
     line-height: 120%;
 }
+  
+h6 {
+    color: #121212;
+    letter-spacing: .03vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.19vw;
+    font-weight: 500;
+    line-height: 120%;
+}
+  
+p {
+    letter-spacing: .03vw;
+    margin-bottom: 0;
+    font-size: 0.98vw;
+}
+  
+a {
+    color: #121212;
+    letter-spacing: .03vw;
+    font-size: 0.9vw;
+    font-weight: 500;
+    line-height: 140%;
+    text-decoration: none;
+}
+
+hr {
+    height: 1px;
+    background-color: #D2D2D7;
+    border: none;
+}
+
+
+
+/* các class dùng chung */
+.border-bottom { border-bottom: 1px solid #000;}
+.border-r { border-right: 1px solid #000; }
+.border-l { border-left: 1px solid #000; }
+
+.padding-top-2px{ padding-top: 0.18vw;}
+.padding-top-10px{ padding-top: 0.9vw;}
+.padding-left-10px{ padding-left: 0.9vw;}
+
+.margin-bottom-24px { margin-bottom: 24px;}
+.margin-top-10px{ margin-top: 10px;}
+.margin-botton-16 { margin-bottom: 16px;}
+.margin-top-16px{ margin-top: 16px;}
+.margin-bottom-10px { margin-bottom: 10px;}
+
+.text-gray { color: #808080;}
+.black-line { background-color: #000;}
+
+
+
 
 /* Header */
+/* Thanh Navbar */
 .navbar {
     width: 100%;
     background-color: #fff;
+    display: flex;
     justify-content: space-between;
-    display: block;
     position: sticky;
-    top: 0%;
-    bottom: auto;
-    left: 0%;
-    right: 0%;
+    top: 0;
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+.navbar a {
+    color: #121212;
+    letter-spacing: 0.03vw;
+    font-size: 1.12vw;
+    font-weight: 500;
+    line-height: 140%;
+    text-decoration: none;
 }
 
 .w-nav {
@@ -39,104 +143,190 @@ h5 {
     position: relative;
 }
 
-.nav-content-grid {
+.nav-content-grid { /* Chia cột cho thanh navbar làm 2 */
     width: 100%;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    background-color: #121212;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #121212;
-    grid-template-rows: auto;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
-    justify-content: space-between;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
     align-items: stretch;
-    display: grid;
+    background-color: #121212;
+    border: 1px solid #000;
+    border-left: none;
+    border-right: none;
     position: fixed;
     top: 0;
 }
 
+/* Thanh Navbar trái */
 .nav-link-left {
     width: 100%;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-    background-color: #ffffff;
+    display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 3fr;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    justify-content: space-between;
-    display: grid;
+    background-color: #121212;
 }
 
+.plug-w100-l {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+/* này là phần chứa icon menu */
+.menu-button-lower-desktop {
+    border-right: .07vw solid #000;
+}
+.w-nav-button {
+    float: right;
+    cursor: pointer;
+    user-select: none;
+    padding: 18px;
+    font-size: 24px;
+    display: none;
+    position: relative;
+}
+
+.lottie-animation {
+    width: 24px;
+    height: 24px;
+}
+
+/* định nghĩa hiện lên khi responsive */
+.hide-1 {
+    padding: 1.7vw;
+    display: none;
+}
+
+/* [DropMenu] khi responsive class này đại diện cho nút menu khi bấm */
+.hide-2 {
+    display: none;
+}
+
+.hide-2 {
+    display: none; /* Ẩn menu mặc định */
+    transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+}
+
+.hide-2.active {
+    display: block; /* Hiện menu khi có class 'active' */
+}
+
+/* [DropMenu] khi responsive class này cấu hình menu */
+.nav-link-copy-100 {
+    width: 100%;
+    color: #121212;
+    text-align: center;
+    letter-spacing: .05em;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 32px 24px;
+}
+.nav-link-copy-100.burger_mobile {
+    letter-spacing: 0;
+    border-bottom: .07vw solid #000;
+    padding: 2.23vw;
+    display: none;
+}
+.w-nav-link {
+    vertical-align: top;
+    color: #222;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.w--nav-link-open {
+    display: block;
+    position: relative;
+}
+
+.wrap-hide-desktop {
+    grid-row-gap: 16px;
+    border-bottom: .07vw solid #121212;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2.23vw;
+    display: none;
+}
+.icon-wrap-hide-desktop {
+    grid-row-gap: 16px;
+    border-bottom: .07vw solid #121212;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2.7vw;
+    display: none;
+}
+
+.caption {
+    text-transform: none;
+    font-size: 1.2vw;
+    line-height: 120%;
+}
+.icon24 {
+    width: 1.77vw;
+    height: 1.77vw;
+}
+
+
+/* Nhớ thêm thông tin của thanh search vào đây */
+
+
+
+
+/* Thanh Navbar phải */
 .nav-link-right {
     width: 100%;
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;
-    background-color: #ffffff;
+    display: grid;
     grid-template-rows: auto;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-auto-columns: 1fr;
     grid-auto-flow: column;
-    justify-content: space-between;
-    display: grid;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: #121212;
 }
 
+.plug-w100-r {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+/* Hiệu ứng khi chưa responsive nó sẽ hiện điều hướng lên */
 .nav-link-wrap {
     width: 100%;
-    background-color: #fff;
     display: flex;
+    background-color: #fff;
 }
 
 .link-block-wrap {
     width: 100%;
+    display: flex;
     justify-content: center;
     align-items: center;
     padding: 2.23vw;
-    display: flex;
 }
 
 .links {
-    height: 21px;
-    grid-column-gap: .139vw;
-    grid-row-gap: .139vw;
+    height: 1.56vw;
+    display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    transition: bottom .3s cubic-bezier(.165, .84, .44, 1), top .3s cubic-bezier(.165, .84, .44, 1), color .3s cubic-bezier(.165, .84, .44, 1);
-    display: flex;
+    gap: 0.139vw; /* Khoảng cách giữa các dòng */
+    transition: 
+        bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        top 0.3s cubic-bezier(0.165, 0.84, 0.44, 1),
+        color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     overflow: hidden;
-}
-
-.border-r {
-    border-right: 1px solid #000;
-}
-
-.border-l {
-    border-left: 1px solid #000;
-}
-
-.link-text {
-    letter-spacing: .033vw;
-    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Hiệu ứng mượt */
-}
-
-.top-text {
-    color: #121212;
-}
-
-.bottom-text {
-    top: 100%; /* Nằm dưới ngoài vùng hiển thị */
-    color: #808080;
-}
-
-
-.links:hover .top-text { /* Hiệu ứng khi trỏ chuột */
-    transform: translate(0, -150%); /* Chuyển lên trên ngoài vùng hiển thị */
-}
-
-.links:hover .bottom-text {
-    transform: translate(0, -100%); /* Di chuyển lên vị trí trung tâm */
 }
 
 .w-inline-block {
@@ -144,158 +334,277 @@ h5 {
     display: inline-block;
 }
 
-.w-nav-menu {
-    float: right;
-    position: relative;
+.link-text {
+    letter-spacing: 0.033vw;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); /* Hiệu ứng mượt */
 }
 
-.navbar a {
-    color: #121212;
-    letter-spacing: .03vw;
-    font-size: 1.12vw;
-    font-weight: 500;
-    line-height: 140%;
-    text-decoration: none;
+/* Hiệu ứng khi trỏ chuột vào */
+.top-text { 
+    color: #121212; 
+}
+.bottom-text {
+    color: #808080;
+    top: 100%; /* Nằm dưới ngoài vùng hiển thị */
+}
+.links:hover .top-text {
+    transform: translateY(-150%); /* Chuyển lên trên ngoài vùng hiển thị */
+}
+.links:hover .bottom-text {
+    transform: translateY(-100%); /* Di chuyển lên vị trí trung tâm */
 }
 
 
-.plug-w100 {
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-    padding-bottom: 0;
+/* [IconCart] khi responsive class này đại diện cho bút bấm điều hướng sang giỏ hàng */
+.cart-button-lower-desktop {
+    border-left: .07vw solid #000;
+    padding: 1.7vw;
+    display: none;
 }
+
+/* Nhớ thêm điều hướng giỏ hàng vào đây */
+
+
+
 
 /* Main Checkout Container */
 .checkout-container {
-    /* margin-top: 90px; Cái này sử dụng để tránh header đè lên nội dung, nếu không dùng margin-top trong main*/
     width: 100%;
     height: 100%;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    background-color: #121212;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-flow: column;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Chia 2 cột đều nhau */
-    background-color: #FFFFFF;
 }
 
-/* Contact Information */
-.contact-info {
-    width: 100%;
-    border-right: 1px solid black;
+
+/* Information */
+.information {
+    background-color: #FFFFFF;
     padding: 30px 50px;
 }
 
-.contact-info .breadcrumb {
+.information .breadcrumb {
     display: flex;
     flex-wrap: wrap;
-    margin: 90px 0 10px;
+    margin: 6vw 0 0.7vw;
     padding: 0;
     list-style: none;
     font-size: 12px;
     color: #555;
     background-color: transparent;
 }
+
 .breadcrumb-item {
-    position: relative; /* Để dùng ::after */
+    position: relative;
     display: flex;
     align-items: center;
+    white-space: nowrap; /* Tránh xuống dòng */
 }
 
-/* Breadcrumb list */
 .breadcrumb-item a {
     text-decoration: none;
-    color: #bbb; /* Màu mờ cho các mục chưa chọn */
+    color: #bbb;
     transition: color 0.3s;
 }
 
-
-.breadcrumb-item.active a { /* Mục đang active */
-    color: #000; /* Màu đen đậm cho mục hiện tại */
-
-    pointer-events: none; /* Không cho click vào mục hiện tại */
+.breadcrumb-item a:hover {
+    color: black;
 }
 
+.breadcrumb-item.active a {
+    color: #000;
+    pointer-events: none; /* Không cho click */
+}
 
-.breadcrumb-item::after { /* Thêm phân cách giữa các mục breadcrumb */
-    content: ">"; /* Phân cách giữa các mục */
+.breadcrumb-item::after {
+    content: ">";
     margin: 0 5px;
-    color: #bbb; /* Mặc định mờ */
+    color: #bbb;
+}
+
+.breadcrumb-item.active::after {
+    color: #000;
 }
 
 
-.breadcrumb-item.active::after { /* Active item separator */
-    color: #000; /* Đậm cho mục đang active */
-}
-
-
-.breadcrumb-item a:hover { /* Hiệu ứng hover trên các mục khác */
-    color: black; /* Đổi màu khi hover */
-}
-
-
-.breadcrumb-item { /* Tránh xuống dòng bất thường */
-    white-space: nowrap;
-}
-
-.contact-info .login-prompt {
-    width: 100%;
-    height: 80px;
+/* [Contact Information] Này là phần điền thông tin cá nhân */
+.information .login-prompt {
     margin-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    height: 80px;
+    line-height: 80px; /* Căn giữa theo chiều dọc */
     font-size: 13px;
     color: black;
     background-color: #D2D2D7;
-    line-height: 80px; /* Căn giữa theo chiều dọc */
-    padding-left: 30px;
-
 }
 
-.contact-info .login-prompt a {
+.information .login-prompt a {
     color: black;
 }
 
-
-.contact-info .information {
-    width: 100%;
+.information .contact-info {
     margin-top: 20px;
 }
 
-.contact-info .form-info {
+.information .form-info {
     margin-top: 20px;
 }
 
-.contact-info .label-info {
-    font-size: 20px;
+.information .label-info {
+    font-size: 1.4vw;
     color: #222;
     margin-bottom: 10px;
 }
 
-.contact-info .information form input {
+.information .contact-info form input {
     width: 100%;
     height: 50px;
     padding: 15px;
     margin-bottom: 10px;
-    border: 1px solid #D2D2D7; /* Thêm border */
+    border: 1px solid #D2D2D7;
 }
 
-
-.next-page {
-    width: 100%;
-    color: #D2D2D7;
+/* [Shipping details] Này là phần điền thông tin giao hàng */
+.information .shipping-details {
     margin-top: 30px;
 }
 
-.next-page label {
-    font-size: 18px;
-
+.information .shipping-details form input {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    padding-right: 1.1vw;
+    margin-bottom: 10px;
+    border: 1px solid #D2D2D7;
 }
+
+.delivery-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Khoảng cách giữa input và select */
+    width: 100%;
+}
+
+.delivery-group input, .delivery-group select {
+    width: 48%; /* Mỗi phần chiếm 48% chiều rộng */
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.information .shipping-details select {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    padding-right: 30px; /* Tạo không gian cho mũi tên */
+    margin-bottom: 10px;
+    border: 1px solid #D2D2D7;
+    appearance: none; /* Ẩn mũi tên mặc định */
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="%23000000"/></svg>') no-repeat right 15px center;
+    background-color: #fff; /* Màu nền */
+    background-size: 1.5vw; /* Kích thước mũi tên */
+}
+
+
+
+
+/* [Payment] Này là phần chọn phương thức thanh toán */
+.information .payment-method {
+    margin-top: 30px;
+}
+
+.information .payment-method form input {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    padding-right: 1.1vw;
+    margin-bottom: 10px;
+    border: 1px solid #D2D2D7;
+}
+
+.information .payment-method select {
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    padding-right: 30px; /* Tạo không gian cho mũi tên */
+    margin-bottom: 10px;
+    border: 1px solid #D2D2D7;
+    appearance: none; /* Ẩn mũi tên mặc định */
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"><path d="M7 10l5 5 5-5z" fill="%23000000"/></svg>') no-repeat right 15px center;
+    background-color: #fff; /* Màu nền */
+    background-size: 1.5vw; /* Kích thước mũi tên */
+}
+
+.payment-group {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Khoảng cách giữa input và select */
+    width: 100%;
+}
+
+.payment-group input{
+    width: 48%; /* Mỗi phần chiếm 48% chiều rộng */
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Này là phần điều hướng ở section Information */
+.undo-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.undo-page label {
+    font-size: 1.4vw;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.icon-edit i {
+    font-size: 1.4vw; /* Tăng kích thước icon */
+    color: #808080;
+}
+
+.icon-edit {
+    padding: 10px;
+    text-align: right;
+    cursor: pointer;
+    pointer-events: auto; /* Đảm bảo các sự kiện như click hoạt động */
+    z-index: 1; /* Đảm bảo icon không bị các lớp khác che */
+}
+
+.next-page {
+    margin-top: 30px;
+    color: #D2D2D7;
+}
+
+.next-page label {
+    font-size: 1.4vw;
+}
+
+
+
 
 /* Order Summary */
 .order-summary {
-    width: 100%;
     padding: 30px 50px;
     background-color: #F5F5F7;
 }
 
 .order-summary .space-label {
-    margin-top: 90px;
+    margin: 6vw 0 0 0;
 }
 
 .order-summary label {
@@ -314,70 +623,62 @@ h5 {
     border: 1px solid black;
 }
 
-.order-summary .show-img .show-img-info {
+.order-summary .show-img-info {
     width: 100%;
     margin-left: 15px;
     text-align: left;
 }
 
-.order-summary .show-img .show-img-cost {
+.order-summary .show-img-cost {
     width: 100%;
     margin-left: 20px;
     text-align: right;
-}
-
-hr {
-    height: 1px; /* Đặt chiều cao */
-    background-color: #D2D2D7; /* Màu nền */
-    border: none; /* Loại bỏ viền mặc định */
 }
 
 .discounts-label {
     margin-top: 20px;
 }
 
-
-.discounts { /* Form chứa input và nút */
+.discounts {
     margin-top: 15px;
-    display: flex; /* Đặt các phần tử trong form trên cùng một hàng */
+    display: flex;
     gap: 10px; /* Khoảng cách giữa các phần tử */
 }
 
-
-.discounts input,
-.discounts .btn-block-wrap { /* Input và nút trong form */
-    flex: 1; /* Chia đều không gian giữa các phần tử */
+.discounts input, 
+.discounts .btn-block-wrap {
+    flex: 1;
     height: 50px;
     border: 1px solid #ddd;
-    box-sizing: border-box; /* Đảm bảo padding không làm thay đổi kích thước */
+    box-sizing: border-box;
 }
 
-.discounts input {
+.discounts input{
     padding: 15px; /* Khoảng cách giữa nội dung và viền */
 }
 
-
-
-.cost-calculate {
+.cost-calculate, .cost-total {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 
 .cost-total {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
     font-size: 20px;
     font-weight: 500;
 }
 
+
+
+
 /* Footer */
 .footer {
-    background-color: #FFFFFF;
+    background-color: #121212;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-columns: 1fr;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
     display: grid;
 }
 
@@ -387,28 +688,12 @@ hr {
     flex-direction: column;
     padding: 2.77vw 2.37vw;
     display: flex;
-    border: 1px solid #000;
     border-left: none;
 }
 
-.footer_column-final{
-    width: 100%;
-    background-color: #fff;
-    flex-direction: column;
-    padding: 2.77vw 2.37vw;
-    display: flex;
-    border: 1px solid #000;
-    border-left: none;
-    border-right: none;
-}
-
-.margin-bottom-24px {
-    margin-bottom: 24px;
-    font-size: 16px;
-}
-
-.margin-bottom-25px {
-    margin-bottom: 24px;
+/* Này cột footer thứ 1 */
+.footer-note {
+    font-size: 1.6vw;
 }
 
 .email-block {
@@ -422,18 +707,11 @@ hr {
     border: 1px solid #D2D2D7;
 }
 
-
-
-
-.btn-block-wrap { /* Khối chứa nút */
+.btn-block-wrap-1 { /* Khối chứa nút */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.margin-top-10px{
-    margin-top: 10px;
 }
 
 .primary-button { /* Nút chính */
@@ -452,7 +730,6 @@ hr {
     transition: background-color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-
 .primary-button:hover {
     background-color: #424245; /* Đổi màu khi hover */
 }
@@ -461,18 +738,12 @@ hr {
     text-decoration: none; /* Loại bỏ dấu gạch chân */
 }
 
-
-.btn-text {/* Văn bản trong nút */
-    letter-spacing: 0.05em;
-    position: absolute;
-    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
-    white-space: nowrap;
-}
-
 .top-btn-text {
+    padding-top: 0.25vw;
     text-decoration: none;
     font-weight: 500;
     color: #fff;
+    margin-bottom: 0.05vw;
 }
 
 .bottom-btn-text {
@@ -482,20 +753,16 @@ hr {
     color: #fff;
 }
 
-
 .links:hover .top-btn-text { /* Hiệu ứng khi trỏ chuột */
     transform: translate(0, -150%); /* Chuyển lên trên ngoài vùng hiển thị */
 }
 
 .links:hover .bottom-btn-text {
-    transform: translate(0, -100%); /* Di chuyển lên vị trí trung tâm */
+    transform: translate(0, -105%); /* Di chuyển lên vị trí trung tâm */
 }
 
 
-.text-gray {
-    color: #808080;
-}
-
+/* Này cột footer thứ 2, 3, 4 */
 .footer_colum-wrap_links {
     grid-column-gap: .56vw;
     grid-row-gap: .56vw;
@@ -503,44 +770,628 @@ hr {
     align-items: flex-start;
     display: flex;
 }
-
-.margin-botton-16 {
-    margin-bottom: 16px;
-}
-
-.caption {
-    text-transform: none;
-    font-size: 14px;
-    line-height: 120%;
-}
-
+ 
 .footer_colum-wrap_links a {
     font-weight: 450;
     text-decoration: none; /* Bỏ gạch chân */
     color: #000; /* Màu đen */
 }
 
-.margin-top-16px{
-    margin-top: 16px;
-}
 
+/* Chỉ sài ở Cột thứ 2 */
 .flex_horizont-justify_start {
-    display: flex; /* Đặt các phần tử con theo hàng ngang */
+    display: flex;                  /* Đặt các phần tử con theo hàng ngang */
     justify-content: space-between; /* Tạo khoảng cách đều giữa các phần tử */
-    align-items: center; /* Căn giữa theo chiều dọc */
+    align-items: center;            /* Căn giữa theo chiều dọc */
 }
 
+.flex_horizont-justify_start.gap-32px {
+    grid-column-gap: 2.22vw;
+    grid-row-gap: 2.22vw;
+}
+  
 img {
     max-width: 100%;
     vertical-align: middle;
     display: inline-block;
 }
 
-.icon24 {
-    width: 1.77vw;
-    height: 1.77vw;
+
+
+
+/* Responsive */
+@media screen and (max-width: 991px) {
+    body {
+      font-size: 2.1vw;
+    }
+  
+    h1 {
+      font-size: 8.7vw;
+    }
+  
+    h2 {
+      font-size: 6.5vw;
+    }
+  
+    h3 {
+      font-size: 4.9vw;
+    }
+  
+    h4 {
+      font-size: 3.6vw;
+    }
+  
+    h5 {
+      font-size: 2.8vw;
+      font-weight: 500;
+    }
+  
+    h6, p, a {
+      font-size: 1.8vw;
+    }
+
+    /* Các class dùng chung */
+    .margin-bottom-24px { margin-bottom: 3.15vw;}
+    .margin-bottom-25px { margin-bottom: 3.28vw;}
+
+
+
+    /* Navbar */
+    .nav-content-grid {
+        border-left: none;
+        border-top-width: 1px;
+    }
+
+
+    .nav-link-left,
+    .nav-link-right {
+        gap: 1px;
+    }
+    .nav-link-left {
+        grid-template-columns: .25fr 1fr;
+    }
+ 
+    .nav-link-right {
+        grid-template-columns: 1fr .25fr;
+        grid-auto-flow: column;
+    }
+
+    /* Navbar trái */
+    /* [IconMenu] Này là hiện cái icon menu lên */
+    .menu-button-lower-desktop {
+        background-color: #fff;
+        border-right-width: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 3.125vw;
+        display: flex;
+    }
+    
+    .lottie-animation {
+        width: 3.125vw;
+        height: 3.125vw;
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .menu-button-lower-desktop.w--open {
+        background-color: #fff;
+    }
+
+    /* Ẩn các khoảng trắng không cần thiết và hiện cái khoảng trắng chuẩn bị trước */
+    .hide-block-l{
+        display: none;
+    }
+
+    .hide-1 {
+        background-color: #fff;
+        padding: 1.7vw;
+        display: flex;
+        position: relative;
+    }
+
+    /* phần này của giao diện khi menu được đổ xuống */
+    .hide-2 {
+        display: none; /* Ẩn menu mặc định */
+        transition: all 0.3s ease; /* Hiệu ứng chuyển động */
+    }
+    
+    .hide-2.active {
+        display: block; /* Hiện menu khi có class 'active' */
+    }
+
+    .wrap-hide-desktop {
+        align-items: flex-start;
+        padding: 3.125vw;
+        display: flex;
+    }
+    
+    .icon-wrap-hide-desktop {
+        padding: 5.2vw;
+        display: flex;
+    }
+    
+    .icon24 {
+        width: 3.125vw;
+        height: 3.125vw;
+        display: block;
+    }
+
+    .nav-link-copy-100 {
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #121212;
+        padding: 24px;
+        font-size: 21px;
+        font-weight: 400;
+        display: none;
+    }
+    
+    .nav-link-copy-100.burger_mobile {
+        letter-spacing: .068vw;
+        padding: 4.16vw;
+        font-size: 2.73vw;
+        font-weight: 500;
+        display: block;
+    }
+
+
+    /* Navbar phải */
+    .nav-link-wrap {
+        background-color: #fff;
+        display: none;
+    }
+
+    .links {
+        height: 2.91vw;
+        grid-column-gap: .26vw;
+        grid-row-gap: .26vw;
+    }
+
+    .link-text {
+        letter-spacing: .053vw;
+        font-size: 1.68vw;
+    }
+
+    .link-block-wrap {
+        border-bottom: 1px solid #000;
+        justify-content: flex-start;
+        padding-top: 3.125vw;
+        padding-bottom: 3.125vw;
+        display: none;
+    }
+
+    .link-block-wrap.border-r {
+        padding: 3.125vw;
+    }
+    
+    .link-block-wrap.border-l {
+        display: none;
+    }
+
+    .cart-button-lower-desktop {
+        background-color: #fff;
+        border-left: 0 #121212;
+        justify-content: center;
+        align-items: center;
+        padding: 3.125vw;
+        display: flex;
+        position: relative;
+    }
+
+    
+
+    /* Body */
+    .checkout-container {
+        overflow: hidden;
+        grid-column-gap: 0px;
+        grid-row-gap: 1px;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-auto-flow: row;
+    }
+
+    /* Information */
+    .information .breadcrumb {
+        margin-top: 2.48vw;
+    }
+
+    .breadcrumb {
+        font-size: 1.8vw;
+    }
+
+    .information .login-prompt {
+        display: flex;
+        align-items: center; /* Căn dọc */
+        font-size: 1.8vw;
+    }
+
+    .information {
+        order: 2; /* Đưa Contact Info xuống dưới */
+    }
+    .information .label-info {
+        font-size: 2.4vw;
+        color: #222;
+        margin-bottom: 10px;
+    }
+    .next-page label {
+        font-size: 2.4vw;
+    }
+    .undo-page label {
+        font-size: 2.4vw;
+    }
+
+    .icon-edit i {
+        font-size: 2.4vw; /* Tăng kích thước icon */
+        color: #808080;
+    }
+
+    /* Order Summary */
+    .order-summary .space-label {
+        margin: 10vw 0 0 0;
+    }    
+
+    .order-summary {
+        order: 1; /* Đưa Order Summary lên đầu */
+    }
+
+
+
+
+
+
+    /* Footer */
+    .footer {
+        overflow: hidden;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer_colum-wrap_links {
+        grid-column-gap: 1.05vw;
+        grid-row-gap: 1.05vw;
+    }
+
+    .caption {
+        font-size: 1.8vw;
+    }
+
+    .footer_column {
+        padding: 5.21vw;
+    }
+
 }
 
-.margin-bottom-10px {
-    margin-bottom: 10px;
+
+@media screen and (max-width: 767px) {
+    body {
+      font-size: 2.8vw;
+    }
+  
+    h1 {
+      font-size: 11.8vw;
+      line-height: 120%;
+    }
+  
+    h2 {
+      font-size: 8.8vw;
+    }
+  
+    h3 {
+      font-size: 6.7vw;
+    }
+  
+    h4 {
+      font-size: 4.9vw;
+    }
+  
+    h5 {
+      font-size: 3.7vw;
+    }
+  
+    h6 {
+      font-size: 2.9vw;
+    }
+  
+    p {
+      font-size: 2.9vw;
+      line-height: 130%;
+    }
+  
+    a {
+      font-size: 2.5vw;
+    }
+
+    /* Các class dùng chung */
+
+
+    /* Navbar */
+    /* Navbar trái */
+    .nav-link-left {
+        grid-template-columns: .25fr 1fr;
+    }
+
+    .lottie-animation {
+        width: 4.22vw;
+        height: 4.22vw;
+    }
+
+    .menu-button-lower-desktop, .cart-button-lower-desktop {
+        padding: 1.4vw;
+    }
+        
+    .wrap-hide-desktop {
+        padding: 4.22vw;
+    }
+
+    .icon-wrap-hide-desktop {
+        padding: 7.04vw;
+    }
+
+    .icon24 {
+        width: 4.22vw;
+        height: 4.22vw;
+    }
+
+    .nav-link-copy-100.burger_mobile {
+        letter-spacing: .0915vw;
+        padding: 4.22vw;
+        font-size: 3.66vw;
+    }
+
+    /* Navbar phải */
+    .nav-link-right {
+        grid-template-columns: 1fr .25fr;
+    }
+    
+    .links {
+        grid-column-gap: .352vw;
+        grid-row-gap: .352vw;
+    }
+    
+    .link-text {
+        letter-spacing: .073vw;
+        font-size: 2.46vw;
+    }
+
+
+    /* Body */
+    .order-summary {
+        order: 1; /* Đưa Order Summary lên đầu */
+    }
+    .information {
+        order: 2; /* Đưa Contact Info xuống dưới */
+    }
+
+    .breadcrumb {
+        font-size: 2.5vw;
+    }
+
+
+
+    /* Footer */
+    .caption {
+        font-size: 2.5vw;
+    }
+    
+    .primary_button {
+        letter-spacing: .074vw;
+        padding: 2.8vw 4.2vw;
+    }
+
+    .footer_colum-wrap_links {
+        grid-column-gap: 1.4vw;
+        grid-row-gap: 1.4vw;
+    }
+    
+}
+
+
+@media screen and (max-width: 479px) {
+    body {
+      font-size: 3vw;
+    }
+  
+    h1 {
+      font-size: 12vw;
+    }
+  
+    h2 {
+      font-size: 10vw;
+    }
+  
+    h3 {
+      font-size: 6.9vw;
+    }
+  
+    h4 {
+      font-size: 5.86vw;
+    }
+  
+    h5 {
+      font-size: 4.8vw;
+    }
+  
+    h6 {
+      font-size: 4.3vw;
+    }
+  
+    p {
+      font-size: 3.3vw;
+      line-height: 130%;
+    }
+  
+    a {
+      font-size: 3.1vw;
+    }
+
+
+    /* Các class dùng chung */
+    .margin-botton-16 { margin-bottom: 4.28vw;}
+    .margin-right-16px { margin-right: 4.28vw;}
+
+
+    /* Navbar */
+    .nav-content-grid {
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        border-top-width: 1px;
+        border-bottom-width: 1px;
+        grid-auto-flow: column;
+    }
+
+    /* Navbar trái */
+    .menu-button-lower-desktop {
+        padding: 3.8vw;
+    }
+
+    .lottie-animation {
+        width: 6.4vw;
+        height: 6.4vw;
+    }
+
+    .wrap-hide-desktop {
+        border-bottom-width: 1px;
+        padding: 5.79vw;
+    }
+    
+    .icon-wrap-hide-desktop {
+        border-bottom-width: 1px;
+        padding: 9.66vw 5.79vw;
+    }
+    
+    .icon24 {
+        width: 6.4vw;
+        height: 6.4vw;
+        min-height: 24px;
+        min-width: 24px;
+    }
+
+    .nav-link-copy-100 {
+        letter-spacing: .125vw;
+        padding: 5.8vw;
+        font-size: 5vw;
+    }
+    
+    .nav-link-copy-100.burger_mobile {
+        letter-spacing: .125vw;
+        border-bottom-width: 1px;
+        padding: 5.79vw;
+        font-size: 5vw;
+    }
+    
+
+    /* Navbar phải */
+    .nav-link-right {
+        grid-template-columns: 1fr .25fr;
+    }
+
+    .links {
+        height: 4.68vw;
+        grid-column-gap: .483vw;
+        grid-row-gap: .483vw;
+    }
+
+    .link-text {
+        font-size: 2.9vw;
+    }
+
+    .cart-button-lower-desktop {
+        padding: 3.8vw;
+        position: static;
+    }
+
+
+    /* Body */
+    .checkout-container  {
+        border-bottom-width: 1px;
+    }
+
+    .information .breadcrumb {
+        margin-top: 2.48vw;
+    }
+
+    .breadcrumb {
+        font-size: 2.7vw;
+    }
+
+    .information .login-prompt {
+        display: flex;
+        align-items: center; /* Căn dọc */
+        font-size: 2.71vw;
+
+    }
+
+    .information {
+        order: 2; /* Đưa Contact Info xuống dưới */
+    }
+    .information .label-info {
+        font-size: 3.78vw;
+        color: #222;
+        margin-bottom: 10px;
+    }
+    .next-page label {
+        font-size: 3.78vw;
+    }
+    .undo-page label {
+        font-size: 3.78vw;
+    }
+
+    .icon-edit i {
+        font-size: 3.4vw; /* Tăng kích thước icon */
+        color: #808080;
+    }
+
+    /* Order Summary */
+    .order-summary .space-label {
+        margin: 10vw 0 0 0;
+    }    
+
+    .order-summary {
+        order: 1; /* Đưa Order Summary lên đầu */
+    }
+
+    .cost-total {
+        font-size: 3.3vw;
+    }
+
+    .primary-button {
+        padding: 4.4vw 5.8vw 3.9vw;
+    }
+    
+
+    /* Footer */
+    .footer {
+        overflow: hidden;
+        grid-template-columns: 1fr;
+    }
+
+    .footer_column {
+        padding: 9.66vw 5.79vw;
+    }
+
+    .caption {
+        font-size: 3.7vw;
+    }
+
+    .footer_colum-wrap_links {
+        grid-column-gap: 2.2vw;
+        grid-row-gap: 2.2vw;
+    }
+    
+    .flex_horizont-justify_start.gap-32px {
+        grid-column-gap: 7.7vw;
+        grid-row-gap: 7.7vw;
+    }
+    
+    .flex_horizont-justify_start.margin-bottom-24px {
+        align-items: flex-start;
+    }
+    
+    .flex_horizont-justify_start.margin-botton-16 {
+        flex-wrap: wrap;
+    }
+
+
+
 }

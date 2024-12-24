@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Payment Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/9d53f4751e.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.10.2/lottie.min.js"></script>
+
+    </head>
+    <body>
+        <!-- Header Section -->
+        <div class="navbar w-nav">
+            <div class="nav-content-grid">
+                <div class="nav-link-left">
+
+                    <!-- Này là cái icon menu lúc đầu nó ẩn khi về 991px thì nó hiện lên -->
+                    <div id="menu-non-desktop" class="menu-button-lower-desktop w-nav-button" aria-label="menu" role="button" tabindex="0" aria-controls="w-nav-overlay-0" aria-haspopup="menu" aria-expanded="false">
+                        <div class="lottie-animation">
+                            <i class="fa-solid fa-bars"></i> 
+                        </div>
+                    </div>
+
+                    <!-- Cái này dùng để hiện lên lúc responsive
+                     sau khi responsive nhớ bỏ menu vào chỗ này -->
+                     <div class="plug-w100-l hide-1"></div>
+
+                    <!-- Hai cái dive block-l này nhớ chèn 1 cái logo và 1 cái search -->
+                    <!-- Này là logo -->
+                    <div class="plug-w100-l hide-block-l"></div>
+
+                    <!-- Này là thanh search -->
+                    <div class="plug-w100-l hide-block-l"></div>
+
+                </div>
+
+                <div class="nav-link-right">
+                    
+                    <!-- Cái chõ này là sau khi về 991px thì nó hiện lên như là khoảng trắng -->
+                    <div class="plug-w100-r hide-1"></div>
+
+                    <!-- Này là cái incon giỏ hàng lúc đầu nó ẩn xong khi về 991px nó hiện -->
+                    <div class="cart-button-lower-desktop"><img src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/649c824defd18fb4cfaba780_svg.svg" loading="lazy" height="Auto" width="Auto" alt="" class="icon24"></div>
+                    
+                    <!-- Cái này sau khi responsive thì nó sẽ bị ẩn đi  -->
+                    <div class="nav-link-wrap">
+                        <div class="link-block-wrap">
+                            <a href="#" class="links w-inline-block">
+                                <div class="link-text top-text">Cửa Hàng</div>
+                                <div class="link-text bottom-text">Cửa Hàng</div>
+                            </a>
+                        </div>
+
+                        <div class="link-block-wrap border-l">
+                            <a href="#" class="links w-inline-block">
+                                <div class="link-text top-text">Liên Hệ</div>
+                                <div class="link-text bottom-text">Liên Hệ</div>
+                            </a>
+                        </div>
+
+                        <div class="link-block-wrap border-l">
+                            <a href="#" class="links w-inline-block">
+                                <div class="link-text top-text">Giỏ Hàng</div>
+                                <div class="link-text bottom-text">Giỏ Hàng</div>
+                            </a>
+                        </div> 
+
+                        <div class="link-block-wrap border-l">
+                            <a href="#" class="links w-inline-block">
+                                <div class="link-text top-text">Đăng Nhập</div>
+                                <div class="link-text bottom-text">Đăng Nhập</div>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <!-- Này là giao diện của thanh điều ẩn khi về 991px và khi nhấn vào icon menu nó hiện ra -->
+                    <div class="hide-2">
+                        <a href="#" class="nav-link-copy-100 burger_mobile w-nav-link w--nav-link-open">Đăng Nhập</a>
+                        <a href="#" class="nav-link-copy-100 burger_mobile w-nav-link w--nav-link-open">Cửa Hàng </a>
+                        <a href="#" class="nav-link-copy-100 burger_mobile w-nav-link w--nav-link-open">Dịch Vụ</a>
+                        <a href="#" class="nav-link-copy-100 burger_mobile w-nav-link w--nav-link-open">Liên Hệ</a>
+                        <a href="#" class="nav-link-copy-100 burger_mobile w-nav-link w--nav-link-open">Giới Thiệu </a>
+                        <div class="wrap-hide-desktop">
+                            <a href="#" class="caption"> Giao Hàng &amp; Hoàn Trả</a>
+                            <a href="#" class="caption"> Điều Khoản &amp; Điều Kiện</a>
+                            <a href="#" class="caption"> Chính sách bảo mật</a>
+                        </div>
+                        <div class="icon-wrap-hide-desktop">
+                            <img
+                                src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e144ecf86c56_Instagram.svg"
+                                loading="lazy" width="24" height="24"
+                                alt="store photo" class="icon24" />
+                            <img
+                                src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e1d70bf86c58_Pinterest.svg"
+                                loading="lazy" width="24" height="24" alt
+                                class="icon24" />
+                            <img
+                                src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e16d07f86c59_Facebook.svg"
+                                loading="lazy" width="24" height="24" alt
+                                class="icon24" />
+                            <img
+                                src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e1cb4ef86c57_Twitter.svg"
+                                loading="lazy" width="24" height="24" alt
+                                class="icon24" />
+                            <img
+                                src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e17d93f86c5a_Telegram.svg"
+                                loading="lazy" width="24" height="24" alt
+                                class="icon24" />
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Checkout Section -->
+        <div class="checkout-container border-bottom">
+
+            <!-- Information Section -->
+            <div class="information">
+
+                <!-- Thanh điều hướng -->
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="informantion.html">THÔNG TIN</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            <a href="#">GIAO HÀNG</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="payment.html">THANH TOÁN</a>
+                        </li>
+                    </ol>
+                </nav>
+
+                <div class="undo-page">
+                    <div class="content-wrapper">
+                        <i class="fa-solid fa-check"></i>
+                        <label class="padding-left-10px">Thông tin liên hệ</label>
+                    </div>
+                    <div>
+                        <a href="informantion.html" class="icon-edit"><i class="fa-solid fa-pen-to-square"></i></a>
+                    </div>
+                </div>
+                
+                <br><hr>
+
+                <div class="shipping-details">
+                    <label for="form-info" class="label-info">2 Chi tiết vận chuyển</label>
+                    <form class="form-info">
+
+                        <input type="text" id="recipientName" placeholder="Tên người nhận" required>
+
+                        <input type="tel" id="recipientYourPhone" placeholder="Số điện thoại của người nhận *" required>
+
+                        <div class="delivery-group">
+                            <input type="date" id="dateOfDelivery" placeholder="Ngày nhận hàng" required>
+
+                            <select id="transport-type" name="transport-type">
+                                <option value="" disabled selected>Loại hình vận chuyển</option>
+                                <option value="saver">Tiết kiệm</option>
+                                <option value="fast">Nhanh</option>
+                                <option value="express">Hỏa tốc</option>
+                            </select>
+                        </div>
+                            
+                        <input type="text" id="address-delivery" placeholder="Địa chỉ nhận hàng" required>
+                        <input type="text" id="apartmentNumber" placeholder="Số nhà (nếu có)" required>
+
+                        <div class="btn-block-wrap">
+                            <div class="primary-button">
+                                <a href="payment.html" class="links w-inline-block">
+                                    <div class="link-text top-btn-text">TIẾP TỤC</div>
+                                    <div class="link-text bottom-btn-text">TIẾP TỤC</div>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <br><hr>
+
+                <div class="next-page">
+                    <label>3 Thanh toán</label>
+                </div>
+                <br><hr>
+
+            </div>
+
+            <!-- Order Summary Section -->
+            <div class="order-summary">
+                <label style="font-size: 13px;" class="space-label">CHI TIẾT ĐƠN HÀNG</label>
+                <div class="show-img">
+                    <img src="image/anh_hoa.jpg">
+                    <div class="show-img-info">
+                        <p><b>Tuyết rơi</b></p>
+                        <p>Số lượng (1)</p>
+                    </div>
+                    <div class="show-img-cost">
+                        <p>100.000 VNĐ</p>
+                    </div>
+                </div>
+                <br><hr>
+
+                <label for="discounts" class="discounts-label">Nếu bạn có mã khuyến mãi, hãy nhập để được giảm giá</label>
+                <form class="discounts">
+                    <input type="text" id="gift-card" placeholder="Mã giảm giá">
+
+                    <div class="btn-block-wrap">
+                        <div class="primary-button">
+                            <a href="#" class="links w-inline-block">
+                                <div class="link-text top-btn-text">ÁP DỤNG</div>
+                                <div
+                                    class="link-text bottom-btn-text">ÁP DỤNG</div>
+                            </a>
+                        </div>
+                    </div>
+                </form>
+                <br><hr>
+
+                <div>
+                    <div class="cost-calculate">
+                        <label for="cost-subtotal">Tổng tiền hàng</label>
+                        <div id="cost-subtotal">100.000 VNĐ</div>
+                    </div>
+                    <div class="cost-calculate">
+                        <label for="cost-shipping">Phí vẫn chuyển</label>
+                        <div id="cost-shipping">Tính toán ở bước sau</div>
+                    </div>
+                </div>
+                <br><hr>
+
+                <div class="cost-total">
+                    <label for="cost-total-amount">Tổng tiền thanh toán</label>
+                    <div id="cost-total-amount">100.000 VNĐ</div>
+                </div>
+
+                <div class="">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer border-bottom">
+
+            <!-- Cột footer thứ 1 -->
+            <div class="footer_column">
+                <div class="footer-note">
+                    <p class="margin-bottom-24px">Nhớ gửi tặng những bông hoa đẹp từ Nhà Có Hoa vào Lễ tình nhân, Quốc tế phụ nữ, Giáng Sinh, ... Nhắc nhở bạn trước 7 ngày. Bảo vệ thông tin cá nhân của bạn</p>
+                </div>
+
+                <div class="email-block">
+                    <form>
+                        <input type="text" id="email-2"
+                            placeholder="Email của bạn">
+                        <div class="btn-block-wrap-1 margin-top-10px">
+                            <div class="primary-button">
+                                <a href="#" class="links w-inline-block">
+                                    <div
+                                        class="link-text top-btn-text">NHẮC NHỞ</div>
+                                    <div
+                                        class="link-text bottom-btn-text">NHẮC NHỞ</div>
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Cột footer thứ 2 -->
+            <div class="footer_column">
+                <h5 class="text-gray margin-bottom-24px">Liên hệ với chúng tôi</h5>
+                <div class="footer_colum-wrap_links margin-bottom-16px">
+                    <p class="caption text-gray">Địa chỉ</p>
+                    <a href="#" class="links w-inline-block margin-bottom-24px padding-top-2px">
+                        <div class="link-text top-text">KTX khu A, Linh Trung,
+                            Thủ Đức, TP HCM</div>
+                        <div class="link-text bottom-text">KTX khu A, Linh
+                            Trung, Thủ Đức, TP HCM</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-16px">
+                    <p class="caption text-gray">Số điện thoại</p>
+                    <a href="#" class="links w-inline-block margin-bottom-24px padding-top-2px">
+                        <div class="link-text top-text">+8437xxxxxxx</div>
+                        <div class="link-text bottom-text">+8437xxxxxxx</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-16px">
+                    <p class="caption text-gray">Gửi câu hỏi:</p>
+                    <a href="#" class="links w-inline-block margin-bottom-24px padding-top-2px">
+                        <div
+                            class="link-text top-text">2252xxxx@gm.uit.edu.vn</div>
+                        <div
+                            class="link-text bottom-text">2252xxxx@gm.uit.edu.vn</div>
+                    </a>
+                </div>
+                <h5 class="text-gray margin-bottom-24px">Theo dõi chúng tôi</h5>
+
+                <div class="flex_horizont-justify_start gap-32px">
+                    <a href="#" class="link-block w-inline-block"><img
+                            src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e144ecf86c56_Instagram.svg"
+                            loading="lazy" width="24" height="24"
+                            alt="store photo" class="icon24"></a>
+                    <a href="#" class="link-block w-inline-block"><img
+                            src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e1d70bf86c58_Pinterest.svg"
+                            loading="lazy" width="24" height="24" alt
+                            class="icon24"></a>
+                    <a href="#" class="link-block w-inline-block"><img
+                            src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e16d07f86c59_Facebook.svg"
+                            loading="lazy" width="24" height="24" alt
+                            class="icon24"></a>
+                    <a href="#" class="link-block w-inline-block"><img
+                            src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e1cb4ef86c57_Twitter.svg"
+                            loading="lazy" width="24" height="24" alt
+                            class="icon24"></a>
+                    <a href="#" class="link-block-no-margin w-inline-block"><img
+                            src="https://cdn.prod.website-files.com/6400d82951450021c2d1eb7b/6433f820e186e17d93f86c5a_Telegram.svg"
+                            loading="lazy" width="24" height="24" alt
+                            class="icon24"></a>
+                </div>
+            </div>
+
+            <!-- Cột footer thứ 3 -->
+            <div class="footer_column">
+                <h5 class="text-gray margin-bottom-24px">Cửa hàng</h5>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Tất cả Hoa</div>
+                        <div class="link-text bottom-text">Tất cả Hoa</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Hoa tươi</div>
+                        <div class="link-text bottom-text">Hoa tươi</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Hoa khô</div>
+                        <div class="link-text bottom-text">Hoa khô</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Cây sống</div>
+                        <div class="link-text bottom-text">Cây sống</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Bình cắm hoa</div>
+                        <div class="link-text bottom-text">Bình cắm hoa</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Nến thơm</div>
+                        <div class="link-text bottom-text">Nến thơm</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-24px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Freshener Diffuser</div>
+                        <div class="link-text bottom-text">Freshener Diffuser</div>
+                    </a>
+                </div>
+                <h5 class="text-gray margin-bottom-24px">Dịch vụ</h5>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Đăng ký hoa</div>
+                        <div class="link-text bottom-text">Đăng ký hoa</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Trang trí Tiệc cưới và Sự kiện</div>
+                        <div class="link-text bottom-text">Trang trí Tiệc cưới và Sự kiện</div>
+                    </a>
+                </div>
+            </div>
+
+
+            <!-- Cột footer thứ 4 -->
+            <div class="footer_column">
+                <h5 class="text-gray margin-bottom-24px">Thông tin về chúng tôi</h5>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Câu chuyện của chúng tôi</div>
+                        <div class="link-text bottom-text">Câu chuyện của chúng tôi</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-24px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Blog</div>
+                        <div class="link-text bottom-text">Blog</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Vận chuyển & Hoàn trả</div>
+                        <div class="link-text bottom-text">Vận chuyển & Hoàn trả</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Điều khoản & Điều kiện</div>
+                        <div class="link-text bottom-text">Điều khoản & Điều kiện</div>
+                    </a>
+                </div>
+                <div class="footer_colum-wrap_links margin-bottom-10px">
+                    <a href="#" class="links w-inline-block padding-top-2px">
+                        <div class="link-text top-text">Chính sách bảo mật</div>
+                        <div class="link-text bottom-text">Chính sách bảo mật</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
